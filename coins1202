@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+	int money;
+	while(scanf("%d",&money)!=EOF)
+	{
+		int coin=0;
+		while(1) 
+		{
+		   if(money/50>0)
+		   {
+			   coin+=money/50;
+			   money-=(money/50)*50;
+		   }
+		   if(money/10>0)
+		   {
+			   coin+=money/10;
+			   money-=(money/10)*10;
+		   }
+		   if(money/5>0)
+		   {
+			   coin+=money/5;
+			   money-=(money/5)*5;
+		   }
+		   if(money==0)
+		   {
+			   break;
+		   }
+		   if(money/1>0)
+		   {
+			   coin+=money;
+			   money-=(money/1)*1;
+		   }
+	    }   
+	    printf("%d\n",coin);
+	}
+ } 
