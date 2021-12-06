@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+	int enter,i,a;
+	while(scanf("%d",&enter)!=EOF)
+	{
+		int num[10]={0};
+		int total=0; //歸零 
+		for (i=1;i<=enter;i++)
+		{
+			scanf("%d",&a);
+			total+=a; //把所輸入的數字加起來 
+			num[a]++;  //計a這個數字次數 
+		}
+	   for(i=0;i<=9;i++)
+	   {
+	   	  printf("%d ",i);
+	   }
+	   puts("");
+	   for(i=0;i<10;i++)
+	   {
+	   	printf("%d ",num[i]);
+	   }
+	   puts("");
+	   printf("%.2f\n",(float)total/enter);
+	}
+	
+	return 0;
+}
