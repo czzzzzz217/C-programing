@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,num1,num2;
+	char character;
+	scanf("%d %d %c",&num1,&num2,&character);
+	for(i=1;i<=num1;i++)
+	{
+		for(j=1;j<=num2;j++)
+		{
+			printf("%c",character);
+		}
+		puts("");
+	}
+}
