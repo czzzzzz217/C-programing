@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+	int enter,i,j,sum=0;
+	scanf("%d",&enter);
+	sum=enter;
+	for(i=1;i<=sum;i++)
+	{
+		for(j=1;j<=enter;j++)
+		{
+			printf("*");
+		}
+		enter-=1;
+		puts("");
+	}
+	return 0;
+}
