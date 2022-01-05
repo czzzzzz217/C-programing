@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int enter;
+	scanf("%d",&enter);
+	int i,j,a=1,b=enter-1;
+	for(i=0;i<enter;i++)
+	{
+		for(j=0;j<b;j++)
+		{
+			printf(" ");
+		}
+		for(j=0;j<a;j++)
+		{
+			printf("*");
+		}
+		b--;
+		a++;
+		puts("");
+	}
+	
+	return 0;
+}
