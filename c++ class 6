@@ -1,0 +1,20 @@
+#include<iostream>  
+#include<cstring>  
+using namespace std;  
+int main()  
+{    
+    string ca;  
+    while(cin>>ca)  \\重複迴圈
+    {  
+        int i;  
+        int total=0;  
+        for(i=0;ca[i]!='\0';i++) \\繼續條件可以改成 i=ca.size()  
+        {  
+            if(isdigit(ca[i]))  \\如果是數字則...
+            {  
+                total+=ca[i]-'0'; \\扣掉基礎值 
+            }  
+        }   
+        cout<<total<<endl;  
+    }  
+}
