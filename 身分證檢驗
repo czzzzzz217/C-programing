@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	string ident;
+	cin>>ident;
+	int a=8,i,j,total=0,firlet=0;
+	string en_alpha = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
+	for ( i = 0; i < 26; i++)
+    {
+    	 if (ident[0] == en_alpha[i])
+        {
+        	firlet=((i+10)/10+(i+10)%10*9);
+    	}
+	}
+	for(j=1;j<9;j++)
+	{
+		total+=(ident[j]-'0')*a;
+		a--;
+	}
+	total+=(ident[9]-'0')+firlet;
+	if(total%10==0)
+	{
+		cout<<"real"<<endl;
+	}
+	else
+	{
+		cout<<"fake"<<endl;
+	}
+}
